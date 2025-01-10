@@ -259,3 +259,66 @@ header button:hover {
         font-size: 14px;
     }
 }
+
+/* Default styles (for larger screens) */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.menu-item {
+    width: 30%; /* 3 items per row on larger screens */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Styles for smaller screens (phones) */
+@media (max-width: 768px) {
+    .menu-item {
+        width: 48%; /* 2 items per row on smaller screens */
+    }
+}
+
+/* Styles for extra small screens (portrait phones) */
+@media (max-width: 480px) {
+    .menu-item {
+        width: 100%; /* 1 item per row on small screens */
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+body {
+    font-size: 1rem; /* Default font size */
+}
+
+h1 {
+    font-size: 2.5rem; /* Larger title on large screens */
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem; /* Smaller title on mobile */
+    }
+}
